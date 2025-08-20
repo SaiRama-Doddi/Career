@@ -1,0 +1,127 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const ServicesSection = () => {
+  return (
+    <section className="py-5 bg-white text-center">
+      <div className="container">
+        {/* Small Section Tag */}
+        <p className="text-uppercase fw-bold text-muted mb-2" style={{ fontSize: "14px" }}>
+          What We Offer
+        </p>
+
+        {/* Section Heading */}
+        <h2 className="fw-bold mb-3">
+          Tailored Services for Aspiring <br /> 
+          <span className="text-dark">Aviators & Global Learners</span>
+        </h2>
+
+        {/* Subtitle */}
+        <p className="text-muted mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
+          Embark on your journey with expert guidance and top-tier resources.
+          Whether you’re aiming for the skies or seeking world-class education overseas
+        </p>
+
+        {/* Cards Row */}
+        <div className="row g-4 mb-5">
+          {/* Study Abroad Card */}
+       <div className="col-md-4">
+  <div className="card border-0 shadow-sm h-100">
+    <div className="row g-0 align-items-center">
+      {/* Left side: Text + Button */}
+      <div className="col-md-6 d-flex flex-column justify-content-center p-3">
+        <h5 className="fw-bold">Study Abroad</h5>
+        <p className="text-muted">
+          Our study abroad program connects students with top universities across the globe.
+        </p>
+        <button className="btn btn-danger fw-bold mt-auto">Enroll Now</button>
+      </div>
+
+      {/* Right side: Image */}
+      <div className="col-md-6">
+        <img
+          src="https://img.freepik.com/free-photo/student-girl-holding-notebooks_23-2147666500.jpg"
+          alt="Study Abroad"
+          className="img-fluid h-100 w-100"
+          style={{ borderRadius: "0 12px 12px 0", objectFit: "cover" }}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        {/* Aviation Training Card */}
+<div className="col-md-4">
+  <div className="card border-0 shadow-sm h-100">
+    <div className="row g-0 align-items-center">
+      {/* Left side: Text + Button */}
+      <div className="col-md-6 d-flex flex-column justify-content-center p-3">
+        <h5 className="fw-bold">Aviation Training</h5>
+        <p className="text-muted">
+          Master the skies with professional aviation training for a high-flying global career.
+        </p>
+        <button className="btn btn-primary fw-bold mt-auto">Explore More</button>
+      </div>
+
+      {/* Right side: Image */}
+      <div className="col-md-6">
+        <img
+          src="https://img.freepik.com/free-photo/smiling-pilot-uniform_23-2148162199.jpg"
+          alt="Aviation Training"
+          className="img-fluid h-100 w-100"
+          style={{ borderRadius: "0 12px 12px 0", objectFit: "cover" }}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* Career Counseling Card */}
+<div className="col-md-4">
+  <div className="card border-0 shadow-sm h-100">
+    <div className="row g-0 align-items-center">
+      {/* Left side: Text + Button */}
+      <div className="col-md-6 d-flex flex-column justify-content-center p-3">
+        <h5 className="fw-bold">Career Counseling</h5>
+        <p className="text-muted">
+          Our study abroad program connects students with top universities across the globe.
+        </p>
+        <button className="btn btn-success fw-bold mt-auto">Book a Session</button>
+      </div>
+
+      {/* Right side: Image */}
+      <div className="col-md-6">
+        <img
+          src="https://img.freepik.com/free-photo/smiling-man-holding-books_23-2147666404.jpg"
+          alt="Career Counseling"
+          className="img-fluid h-100 w-100"
+          style={{ borderRadius: "0 12px 12px 0", objectFit: "cover" }}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        {/* CTA Section */}
+        <h4 className="fw-bold mb-2">Start your career dreams Today</h4>
+        <p className="text-muted mb-4">
+          Building a global future starts with one simple step
+        </p>
+        <button className="btn btn-lg fw-bold text-white" style={{ backgroundColor: "#b77df3" }}>
+          Contact Us
+        </button>
+
+        {/* Bottom Purple Tag */}
+        <div className="mt-5">
+          <span className="badge rounded-pill px-4 py-2 fw-bold" style={{ backgroundColor: "#b77df3" }}>
+            THE TRUSTED PARTNER FOR STUDY ABROAD & AVIATION TRAINING
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;
