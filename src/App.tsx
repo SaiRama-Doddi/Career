@@ -4,6 +4,7 @@ import AboutSection from './components/AboutSection'
 import WhyChooseUs from './components/ChooseUs'
 import CTABanner from './components/CTABanner'
 import FAQ from './components/FAQ'
+import Features from './components/Features'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage'
 import HowItWorksSection from './components/HowItWorksSection'
@@ -22,7 +23,8 @@ function App() {
     <>
     <Navbar />
       <HomePage/>
-      <AboutSection/>
+      <Features/>
+      <AboutSection />
       <PilotOnboardSection/>
       <ServicesSection/>
        <WhyChooseUs/>
