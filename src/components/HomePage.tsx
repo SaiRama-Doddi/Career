@@ -1,5 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import image from "../../public/career1.png";
+import image2 from '../../public/career2.png';
+import image3 from '../../public/career3.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
+
 
 const HomePage = () => {
   return (
@@ -102,7 +107,7 @@ const HomePage = () => {
               >
                 {/* Main Image (Graduate) */}
                 <img
-                  src={image}
+                  src={image2}
                   alt="Graduate"
                   className="rounded-4 shadow position-absolute"
                   style={{
@@ -116,7 +121,7 @@ const HomePage = () => {
                 />
                 {/* Overlapping Image (Pilot) */}
                 <img
-                  src={image}
+                  src={image3}
                   alt="Pilot"
                   className="rounded-4 shadow position-absolute"
                   style={{
