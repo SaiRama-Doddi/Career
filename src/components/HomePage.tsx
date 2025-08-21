@@ -1,10 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import image from "../../public/career1.png";
-import image2 from '../../public/career2.png';
-import image3 from '../../public/career3.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTag } from '@fortawesome/free-solid-svg-icons';
 
+import image2 from "../../src/assets/career2.png";
+import image3 from "../../src/assets/career3.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
   return (
@@ -21,16 +20,43 @@ const HomePage = () => {
           <div className="row align-items-center">
             {/* Left Side Content */}
             <div className="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
-              <span
-                className="badge mb-3 px-3 py-2"
-                style={{
-                  backgroundColor: "#a855f7",
-                  border: "1px solid #9b59b6",
-                  color: "white",
-                }}
-              >
-                🎓 Chosen by Over 1000+ Students
-              </span>
+ 
+
+{/* Custom Button with Badge */}
+<div className="d-flex  my-4">
+  <div style={{ position: "relative", display: "inline-block" }}>
+    {/* Badge Image */}
+    <img
+      src="/badge.png" // Place your badge image in the public folder
+      alt="Best Choice Badge"
+      style={{
+        position: "absolute",
+        top: "-18px",
+        left: "-18px",
+        width: "48px",
+        height: "48px",
+        zIndex: 2,
+      }}
+    />
+    {/* Button */}
+    <button
+      style={{
+        background: "#a855f7",
+        color: "#fff",
+        border: "none",
+        borderRadius: "12px",
+        padding: "16px 36px",
+        fontWeight: 600,
+        fontSize: "18px",
+        boxShadow: "0 2px 8px rgba(168,85,247,0.15)",
+        position: "relative",
+        zIndex: 1,
+      }}
+    >
+      Chosen by Over 1000+ Students
+    </button>
+  </div>
+</div>
 
               <h1 className="fw-bold mb-3">
                 Your Trusted Partner to Global <br />

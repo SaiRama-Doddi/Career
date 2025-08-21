@@ -18,7 +18,7 @@ const Features = () => {
                <FontAwesomeIcon
     icon={faPlane}
     className="me-3 rounded"
-    style={{ width: '60px', height: '60px', fontSize: '60px', color: '#0d6efd', backgroundColor: '#e7f1ff', padding: '12px' }}
+    style={{ width: '60px', height: '60px', fontSize: '60px', color: '#a855f7', backgroundColor: 'rgb(235, 223, 246)', padding: '12px' }}
    
   />
           {/* Right Side Content */}
@@ -37,7 +37,7 @@ const Features = () => {
               <FontAwesomeIcon
     icon={faGlobe}
     className="me-3 rounded"
-    style={{ width: '60px', height: '60px', fontSize: '60px', color: '#0d6efd', backgroundColor: '#e7f1ff', padding: '12px' }}
+    style={{ width: '60px', height: '60px', fontSize: '60px', color: '#a855f7', backgroundColor: 'rgb(235, 223, 246)', padding: '12px' }}
    
   />
           <div>
@@ -55,7 +55,7 @@ const Features = () => {
            <FontAwesomeIcon
     icon={faGraduationCap}
     className="me-3 rounded"
-    style={{ width: '60px', height: '60px', fontSize: '60px', color: '#0d6efd', backgroundColor: '#e7f1ff', padding: '12px' }}
+    style={{ width: '60px', height: '60px', fontSize: '60px', color: '#a855f7', backgroundColor: 'rgb(235, 223, 246)', padding: '12px' }}
    
   />
           <div>
