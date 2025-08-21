@@ -1,4 +1,11 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../Animation/animation.css";
+import { useScrollAnimation } from "../Animation/useScrollAnimation";
+
 const CTABanner = () => {
+  const textAnimation = useScrollAnimation<HTMLDivElement>();
+  const buttonAnimation = useScrollAnimation<HTMLDivElement>();
+
   return (
     <section className="py-4">
       <div className="container">
@@ -11,7 +18,10 @@ const CTABanner = () => {
           }}
         >
           {/* Left Content */}
-          <div className="mb-3 mb-md-0">
+          <div
+            className={`mb-3 mb-md-0 fade-up ${textAnimation.isVisible ? "show" : ""}`}
+            ref={textAnimation.ref}
+          >
             <h4 className="fw-bold mb-2">
               Global Careers Made Simple. <br />
               Get Your Profile Evaluated for Free!
@@ -23,9 +33,12 @@ const CTABanner = () => {
           </div>
 
           {/* Right Button */}
-          <div>
+          <div
+            className={`fade-up ${buttonAnimation.isVisible ? "show" : ""}`}
+            ref={buttonAnimation.ref}
+          >
             <button
-              className="btn fw-semibold px-4 py-2"
+              className="btn fw-semibold px-4 py-2 cta-button"
               style={{
                 backgroundColor: "#a855f7",
                 color: "#fff",
