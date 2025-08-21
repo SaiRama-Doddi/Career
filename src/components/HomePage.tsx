@@ -2,8 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import image2 from "../../src/assets/career2.png";
 import image3 from "../../src/assets/career3.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTag } from "@fortawesome/free-solid-svg-icons";
+import offer from '../../src/assets/offer.png';
 
 const HomePage = () => {
   return (
@@ -27,14 +26,14 @@ const HomePage = () => {
   <div style={{ position: "relative", display: "inline-block" }}>
     {/* Badge Image */}
     <img
-      src="/badge.png" // Place your badge image in the public folder
+      src={offer} // Place your badge image in the public folder
       alt="Best Choice Badge"
       style={{
         position: "absolute",
-        top: "-18px",
+        top: "-30px",
         left: "-18px",
-        width: "48px",
-        height: "48px",
+        width: "78px",
+        height: "68px",
         zIndex: 2,
       }}
     />
@@ -45,7 +44,7 @@ const HomePage = () => {
         color: "#fff",
         border: "none",
         borderRadius: "12px",
-        padding: "16px 36px",
+        padding: "12px 26px",
         fontWeight: 600,
         fontSize: "18px",
         boxShadow: "0 2px 8px rgba(168,85,247,0.15)",
