@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect } from "react";
+
 import image2 from "../../src/assets/career2.png";
 import image3 from "../../src/assets/career3.jpg";
 import offer from "../../src/assets/offer.png";
