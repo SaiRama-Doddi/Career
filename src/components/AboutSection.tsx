@@ -1,8 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import  { useState } from "react";
+import { useState } from "react";
+import "../Animation/animation.css";
+import { useScrollAnimation } from "../Animation/useScrollAnimation";
 
 function getRandomColor() {
-  // Generates a pastel random color
   const hue = Math.floor(Math.random() * 360);
   return `hsl(${hue}, 70%, 85%)`;
 }
@@ -24,11 +25,15 @@ const AboutSection = () => {
     newColors[idx] = getRandomColor();
     setHoverColors(newColors);
   };
+
   const handleMouseLeave = (idx: number) => {
     const newColors = [...hoverColors];
     newColors[idx] = "";
     setHoverColors(newColors);
   };
+
+  // Scroll animation hook must be inside component
+  const feature1 = useScrollAnimation<HTMLDivElement>();
 
   return (
     <section className="py-5 bg-white">
@@ -49,20 +54,24 @@ const AboutSection = () => {
               to help students achieve their education and aviation goals — faster,
               smarter, and with confidence.
             </p>
+
             {/* Stats Grid */}
-            <div className="row g-3">
+            <div
+              className={`row fade-up ${feature1.isVisible ? "show" : ""}`}
+              ref={feature1.ref}
+            >
               {stats.map(([num, text], i) => (
-                <div className="col-6" key={i}>
-                <div
-  className="px-3 py-3 rounded-4 shadow-sm text-center"
-  style={{
-    background: hoverColors[i] || "#f8f9fa",
-    transition: "background 0.3s",
-    cursor: "pointer",
-  }}
-  onMouseEnter={() => handleMouseEnter(i)}
-  onMouseLeave={() => handleMouseLeave(i)}
->
+                <div className="col-6 mb-3" key={i}>
+                  <div
+                    className="px-3 py-3 rounded-4 shadow-sm text-center"
+                    style={{
+                      background: hoverColors[i] || "#f8f9fa",
+                      transition: "background 0.3s",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={() => handleMouseEnter(i)}
+                    onMouseLeave={() => handleMouseLeave(i)}
+                  >
                     <h1 className="fw-bold text-success mb-1">{num}</h1>
                     <p className="mb-0 small text-muted">{text}</p>
                   </div>
@@ -70,13 +79,13 @@ const AboutSection = () => {
               ))}
             </div>
           </div>
-          {/* Right Side Images - Responsive Overlap */}
+
+          {/* Right Side Images */}
           <div className="col-lg-6 d-flex justify-content-center">
             <div
               className="position-relative"
               style={{ width: "100%", maxWidth: "320px", height: "280px" }}
             >
-              {/* Main Image (Graduate) */}
               <img
                 src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=400&q=80"
                 alt="Graduate"
@@ -90,7 +99,6 @@ const AboutSection = () => {
                   zIndex: 2,
                 }}
               />
-              {/* Overlapping Image (Pilot) */}
               <img
                 src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=400&q=80"
                 alt="Pilot"
