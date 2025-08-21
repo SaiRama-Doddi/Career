@@ -12,6 +12,8 @@ const PilotOnboardSection = () => {
   const smallImage4 = useScrollAnimation<HTMLDivElement>();
   const middleBadges = useScrollAnimation<HTMLDivElement>();
 
+  const badgeAnimation = useScrollAnimation<HTMLSpanElement>();
+
   return (
     <section className="py-5 bg-white">
       <div className="container">
@@ -23,9 +25,27 @@ const PilotOnboardSection = () => {
             }`}
             ref={leftContent.ref}
           >
-            <span className="badge bg-danger text-white fw-bold px-3 py-2 mb-3">
-              NEW! PilotOnboard
-            </span>
+           <span
+  className={`badge fw-bold px-3 py-2 mb-3 fade-up ${badgeAnimation.isVisible ? "show" : ""}`}
+  style={{
+    background: "#a855f7",
+    color: "#fff",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+  }}
+  onMouseEnter={(e) => {
+    (e.currentTarget as HTMLElement).style.background = "#9333ea"; // darker on hover
+    (e.currentTarget as HTMLElement).style.transform = "scale(1.05)";
+  }}
+  onMouseLeave={(e) => {
+    (e.currentTarget as HTMLElement).style.background = "#a855f7";
+    (e.currentTarget as HTMLElement).style.transform = "scale(1)";
+  }}
+  ref={badgeAnimation.ref}
+>
+  NEW! PilotOnboard
+</span>
+
 
             <h2 className="fw-bold mb-3">
               Join <span className="text-primary">PilotOnboard</span>
@@ -57,7 +77,12 @@ const PilotOnboardSection = () => {
             <a
               href="#"
               className="btn btn-lg fw-bold text-white"
-              style={{ backgroundColor: "#800042" }}
+            style={{
+    background: "#a855f7",
+    color: "#fff",
+    cursor: "pointer",
+    transition: "all 0.3s ease",
+  }}
             >
               Know more about PilotOnboard
             </a>

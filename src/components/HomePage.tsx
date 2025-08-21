@@ -24,6 +24,7 @@ const feature2 = useScrollAnimation<HTMLButtonElement>();
                   <img
                     src={offer}
                     alt="Best Choice Badge"
+                      className="blink" 
                     style={{
                       position: "absolute",
                       top: "-30px",
