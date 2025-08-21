@@ -9,6 +9,7 @@ const PilotOnboardSection = () => {
   const smallImage2 = useScrollAnimation<HTMLDivElement>();
   const smallImage3 = useScrollAnimation<HTMLDivElement>();
   const smallImage4 = useScrollAnimation<HTMLDivElement>();
+  const middleBadges = useScrollAnimation<HTMLDivElement>();
 
   return (
     <section className="py-5 bg-white">
@@ -105,6 +106,19 @@ const PilotOnboardSection = () => {
                     New
                   </span>
                 </div>
+              </div>
+
+              {/* Middle Badges Between Top-Left and Bottom-Left */}
+              <div
+                className={`position-absolute d-flex flex-column align-items-center gap-2 fade-up ${
+                  middleBadges.isVisible ? "show" : ""
+                }`}
+                style={{ top: "90px", left: "40px" }}
+                ref={middleBadges.ref}
+              >
+                <span className="badge bg-success">Tag 1</span>
+                <span className="badge bg-warning text-dark">Tag 2</span>
+                <span className="badge bg-danger">Tag 3</span>
               </div>
 
               {/* Top-Right Small Image */}
