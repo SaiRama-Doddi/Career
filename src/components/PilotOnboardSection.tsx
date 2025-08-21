@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useScrollAnimation } from "../Animation/useScrollAnimation";
+import pilot from "../assets/career1.png";
 
 const PilotOnboardSection = () => {
   // Scroll animation hooks
@@ -70,7 +71,7 @@ const PilotOnboardSection = () => {
             >
               {/* Main Big Image */}
               <img
-                src="https://images.unsplash.com/photo-1604697963529-df83f1e7b6b5?auto=format&fit=crop&w=400&q=80"
+                src={pilot}
                 alt="Pilot"
                 className={`rounded-circle shadow fade-up ${
                   mainImage.isVisible ? "show" : ""
@@ -79,7 +80,7 @@ const PilotOnboardSection = () => {
                   width: "220px",
                   height: "220px",
                   objectFit: "cover",
-                  zIndex: 2,
+                  zIndex: 0,
                 }}
                 ref={mainImage.ref}
               />
@@ -99,12 +100,14 @@ const PilotOnboardSection = () => {
                     className="rounded-circle shadow"
                     style={{ width: "70px", height: "70px", objectFit: "cover" }}
                   />
-                  <span
-                    className="badge bg-primary position-absolute"
-                    style={{ top: "-5px", right: "-5px", fontSize: "12px" }}
-                  >
-                    New
-                  </span>
+                      <span
+  className="badge position-absolute border border-1 text-primary bg-white hover-badge"
+  style={{ top: "-5px", right: "-5px", fontSize: "12px", transition: "all 0.3s ease" }}
+>
+  SACAA Aviation
+</span>
+
+
                 </div>
               </div>
 
@@ -116,9 +119,9 @@ const PilotOnboardSection = () => {
                 style={{ top: "90px", left: "40px" }}
                 ref={middleBadges.ref}
               >
-                <span className="badge bg-success">Tag 1</span>
-                <span className="badge bg-warning text-dark">Tag 2</span>
-                <span className="badge bg-danger">Tag 3</span>
+                <span className="badge text-primary bg-white hover-badge">Affordable Training</span>
+                <span className="badge text-primary bg-white hover-badge">95% pass rate</span>
+                <span className="badge text-primary bg-white hover-badge">30+ Global scope</span>
               </div>
 
               {/* Top-Right Small Image */}
@@ -169,10 +172,10 @@ const PilotOnboardSection = () => {
                     style={{ width: "70px", height: "70px", objectFit: "cover" }}
                   />
                   <span
-                    className="badge bg-primary position-absolute translate-middle-x"
+                    className="badge bg-white text-primary position-absolute translate-middle-x"
                     style={{ bottom: "-10px", left: "50%", fontSize: "12px" }}
                   >
-                    Tag
+                  Counselling
                   </span>
                 </div>
               </div>
