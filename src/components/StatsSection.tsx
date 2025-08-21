@@ -1,7 +1,14 @@
-
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useScrollAnimation } from "../Animation/useScrollAnimation";
 
 const StatsSection = () => {
+  // Scroll animation hooks
+  const leftContent = useScrollAnimation<HTMLDivElement>();
+  const bar1 = useScrollAnimation<HTMLDivElement>();
+  const bar2 = useScrollAnimation<HTMLDivElement>();
+  const bar3 = useScrollAnimation<HTMLDivElement>();
+  const bar4 = useScrollAnimation<HTMLDivElement>();
+
   return (
     <div
       className="container-fluid py-5 d-flex justify-content-center"
@@ -9,7 +16,12 @@ const StatsSection = () => {
     >
       <div className="row align-items-center w-100" style={{ maxWidth: "1200px" }}>
         {/* Left Side Content */}
-        <div className="col-md-6 text-md-start text-center mb-4 mb-md-0">
+        <div
+          className={`col-md-6 text-md-start text-center mb-4 mb-md-0 fade-up ${
+            leftContent.isVisible ? "show" : ""
+          }`}
+          ref={leftContent.ref}
+        >
           <h2 className="fw-bold mb-5">
             Building Futures through{" "}
             <span
@@ -65,39 +77,47 @@ const StatsSection = () => {
             style={{ height: "250px" }}
           >
             <div
-              className="mx-2"
+              ref={bar1.ref}
+              className={`mx-2 fade-up ${bar1.isVisible ? "show" : ""}`}
               style={{
                 width: "50px",
                 height: "80px",
                 backgroundColor: "#d9b3ff",
                 borderRadius: "8px",
+                transition: "all 0.6s ease-out",
               }}
             ></div>
             <div
-              className="mx-2"
+              ref={bar2.ref}
+              className={`mx-2 fade-up ${bar2.isVisible ? "show" : ""}`}
               style={{
                 width: "50px",
                 height: "130px",
                 backgroundColor: "#c080ff",
                 borderRadius: "8px",
+                transition: "all 0.6s ease-out 0.1s",
               }}
             ></div>
             <div
-              className="mx-2"
+              ref={bar3.ref}
+              className={`mx-2 fade-up ${bar3.isVisible ? "show" : ""}`}
               style={{
                 width: "50px",
                 height: "180px",
                 backgroundColor: "#a54dff",
                 borderRadius: "8px",
+                transition: "all 0.6s ease-out 0.2s",
               }}
             ></div>
             <div
-              className="mx-2"
+              ref={bar4.ref}
+              className={`mx-2 fade-up ${bar4.isVisible ? "show" : ""}`}
               style={{
                 width: "50px",
                 height: "220px",
                 backgroundColor: "#8000ff",
                 borderRadius: "8px",
+                transition: "all 0.6s ease-out 0.3s",
               }}
             ></div>
           </div>

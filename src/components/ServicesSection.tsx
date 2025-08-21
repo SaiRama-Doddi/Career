@@ -8,7 +8,7 @@ const ServicesSection = () => {
   const card2 = useScrollAnimation<HTMLDivElement>();
   const card3 = useScrollAnimation<HTMLDivElement>();
   const ctaSection = useScrollAnimation<HTMLDivElement>();
-  const bottomBadge = useScrollAnimation<HTMLDivElement>();
+ 
 
   return (
     <section className="py-5 bg-white text-center">
